@@ -111,9 +111,9 @@ const Home = () => {
   };
 
   return (
-    <div className="pt-16">
+    <div >
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center gradient-bg overflow-hidden">
+      <section className="relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex items-center gradient-bg overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <ParticleBackground />
         <div className="container-max relative z-10">
@@ -124,17 +124,17 @@ const Home = () => {
             className="text-center text-white"
           >
             <motion.h1
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="m-0 text-5xl md:text-7xl font-bold leading-tight mb-6"
             >
               Transform Your Business
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
                 With Innovation
-              </span>
-            </motion.h1>
+                </span>
+                </motion.h1>
             
             <motion.p
               initial={{ opacity: 0 }}
