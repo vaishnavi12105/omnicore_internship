@@ -353,7 +353,7 @@ const Services = () => {
           </motion.div>
 
           <div className="relative">
-            <div className="hidden md:block absolute top-24 left-0 right-0 h-0.5 bg-blue-200"></div>
+      
 
             <div className="grid md:grid-cols-5 gap-8">
               {processSteps.map((process, index) => (
