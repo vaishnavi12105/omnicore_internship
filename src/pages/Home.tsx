@@ -153,7 +153,7 @@ const Home = () => {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <Link
-                to="/contact"
+                to="/get-started"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center group"
               >
                 Get Started Today

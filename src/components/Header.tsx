@@ -57,7 +57,7 @@ export default function Header() {
               />
             </Link>
           ))}
-          <Link to="/contact" className="btn-primary">Get Started</Link>
+          <Link to="/get-started" className="btn-primary">Get Started</Link>
         </nav>
 
         <button
@@ -97,7 +97,7 @@ export default function Header() {
                 </Link>
               ))}
               <div className="px-4 pb-2">
-                <Link to="/contact" className="btn-primary w-full block text-center">
+                <Link to="/get-started" className="btn-primary">
                   Get Started
                 </Link>
               </div>
