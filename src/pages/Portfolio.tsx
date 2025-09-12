@@ -116,9 +116,9 @@ const Portfolio = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300">
         <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -126,10 +126,10 @@ const Portfolio = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Our <span className="gradient-text">Portfolio</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Discover how we've helped businesses transform their operations and achieve 
               remarkable results through innovative software solutions.
             </p>
@@ -148,8 +148,8 @@ const Portfolio = () => {
                 <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">{stat.value}</div>
+                <div className="text-gray-600 dark:text-gray-400 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -157,7 +157,7 @@ const Portfolio = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white dark:bg-gray-800 transition-colors duration-300">
         <div className="container-max">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
@@ -167,7 +167,7 @@ const Portfolio = () => {
                 className={`flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   filter === category.id
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600'
                 }`}
               >
                 <category.icon className="w-5 h-5 mr-2" />
@@ -184,7 +184,7 @@ const Portfolio = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="card overflow-hidden group"
+                className="card overflow-hidden group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-colors duration-300"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -196,13 +196,13 @@ const Portfolio = () => {
                     <div className="flex space-x-4">
                       <a
                         href={project.demoUrl}
-                        className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300"
+                        className="w-12 h-12 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-300"
                       >
                         <ExternalLink className="w-5 h-5" />
                       </a>
                       <a
                         href={project.githubUrl}
-                        className="w-12 h-12 bg-white rounded-full flex items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300"
+                        className="w-12 h-12 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full flex items-center justify-center hover:bg-gray-900 hover:text-white transition-colors duration-300"
                       >
                         <Github className="w-5 h-5" />
                       </a>
@@ -212,24 +212,24 @@ const Portfolio = () => {
 
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">{project.title}</h3>
                     <span className={`px-3 py-1 text-xs font-medium rounded-full ${
-                      project.category === 'web' ? 'bg-blue-100 text-blue-600' :
-                      project.category === 'automation' ? 'bg-green-100 text-green-600' :
-                      'bg-purple-100 text-purple-600'
+                      project.category === 'web' ? 'bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-300' :
+                      project.category === 'automation' ? 'bg-green-100 text-green-600 dark:bg-green-900 dark:text-green-300' :
+                      'bg-purple-100 text-purple-600 dark:bg-purple-900 dark:text-purple-300'
                     }`}>
                       {project.category === 'web' ? 'Web Dev' :
                        project.category === 'automation' ? 'Automation' : 'ML/AI'}
                     </span>
                   </div>
 
-                  <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
+                        className="text-xs bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300 px-2 py-1 rounded"
                       >
                         {tech}
                       </span>
@@ -237,21 +237,21 @@ const Portfolio = () => {
                   </div>
 
                   <div className="space-y-2 mb-6">
-                    <h4 className="font-semibold text-gray-900">Key Results:</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">Key Results:</h4>
                     {project.results.map((result, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-600">
+                      <div key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-300">
                         <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
                         {result}
                       </div>
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
                     <span>Client: {project.client}</span>
                     <span>Duration: {project.duration}</span>
                   </div>
 
-                  <button className="w-full btn-outline flex items-center justify-center group">
+                  <button className="w-full btn-outline flex items-center justify-center group dark:border-gray-700 dark:text-gray-300 hover:dark:bg-gray-700">
                     View Case Study
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
@@ -263,33 +263,47 @@ const Portfolio = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding gradient-bg relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container-max relative z-10">
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center text-white"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-              Join the growing list of successful businesses that have transformed 
-              their operations with our innovative solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-                Start Your Project
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Schedule Consultation
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+<section className="section-padding relative overflow-hidden 
+  bg-gradient-to-br from-blue-500 to-purple-600 
+  dark:from-gray-900 dark:to-gray-800">
+  
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
+
+  <div className="container-max relative z-10">
+    <motion.div
+      initial={{ scale: 0.9, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="text-center"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white dark:text-gray-100">
+        Ready to Start Your Project?
+      </h2>
+      <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed text-white/90 dark:text-gray-300">
+        Join the growing list of successful businesses that have transformed 
+        their operations with our innovative solutions.
+      </p>
+
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button className="bg-white text-blue-600 hover:bg-gray-100 
+          font-semibold py-4 px-8 rounded-lg 
+          transition-all duration-300 transform hover:scale-105 hover:shadow-2xl
+          dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-200">
+          Start Your Project
+        </button>
+
+        <button className="border-2 border-white text-white 
+          hover:bg-white hover:text-blue-600 
+          font-semibold py-4 px-8 rounded-lg 
+          transition-all duration-300 transform hover:scale-105
+          dark:border-gray-300 dark:text-gray-200 dark:hover:bg-gray-200 dark:hover:text-gray-900">
+          Schedule Consultation
+        </button>
+      </div>
+    </motion.div>
+  </div>
+</section>
     </div>
   );
 };

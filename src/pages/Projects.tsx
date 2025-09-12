@@ -9,7 +9,8 @@ const Projects = () => {
     },
     {
       name: "E-Commerce App",
-      description: "Full-stack app with payment integration and user management",
+      description:
+        "Full-stack app with payment integration and user management",
       link: "#",
     },
     {
@@ -20,19 +21,28 @@ const Projects = () => {
   ];
 
   return (
-    <div className="container-max py-16">
-      <h1 className="text-3xl font-bold mb-8 text-gray-900">Our Projects</h1>
+    <div className="container-max py-16 transition-colors duration-300 bg-gray-50 dark:bg-gray-900">
+      {/* Page Heading */}
+      <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">
+        Our Projects
+      </h1>
+
+      {/* Project List */}
       <div className="space-y-6">
         {repos.map((repo, index) => (
           <div
             key={index}
-            className="p-6 bg-white rounded-lg shadow-md border hover:shadow-lg transition"
+            className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-100 dark:border-gray-700 hover:shadow-lg transition"
           >
-            <h2 className="text-xl font-semibold text-blue-600">{repo.name}</h2>
-            <p className="text-gray-600 mt-2">{repo.description}</p>
+            <h2 className="text-xl font-semibold text-blue-600 dark:text-blue-400">
+              {repo.name}
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 mt-2">
+              {repo.description}
+            </p>
             <a
               href={repo.link}
-              className="mt-3 inline-block text-sm text-blue-500 hover:underline"
+              className="mt-3 inline-block text-sm text-blue-500 dark:text-blue-400 hover:underline"
             >
               View Repository →
             </a>

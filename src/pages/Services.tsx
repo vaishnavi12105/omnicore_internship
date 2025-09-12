@@ -20,7 +20,7 @@ import {
   LucideIcon,
 } from "lucide-react";
 
-// ---------- TYPES ----------
+
 type Offering = {
   icon: LucideIcon;
   title: string;
@@ -39,7 +39,7 @@ type Service = {
 
 type ServiceKey = "web" | "automation" | "ml";
 
-// ---------- DATA ----------
+
 const services: Record<ServiceKey, Service> = {
   web: {
     title: "Web Development",
@@ -205,9 +205,9 @@ const Services = () => {
   const currentService = services[activeTab];
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 transition-colors duration-300 bg-gray-50 dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="section-padding bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -215,10 +215,10 @@ const Services = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Our <span className="gradient-text">Services</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Comprehensive software solutions designed to transform your
               business operations and drive sustainable growth in the digital
               era.
@@ -228,7 +228,7 @@ const Services = () => {
       </section>
 
       {/* Service Tabs */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white dark:bg-gray-800">
         <div className="container-max">
           {/* Tab Navigation */}
           <div className="flex flex-col md:flex-row justify-center mb-12 space-y-2 md:space-y-0 md:space-x-2">
@@ -239,7 +239,7 @@ const Services = () => {
                 className={`flex items-center px-6 py-4 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === key
                     ? "bg-blue-600 text-white shadow-lg"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                 }`}
               >
                 <service.icon className="w-5 h-5 mr-2" />
@@ -259,30 +259,30 @@ const Services = () => {
               <div>
                 <div className="flex items-center mb-6">
                   <div
-                    className={`w-16 h-16 bg-${currentService.color}-100 rounded-2xl flex items-center justify-center mr-4`}
+                    className={`w-16 h-16 bg-${currentService.color}-100 dark:bg-${currentService.color}-900 rounded-2xl flex items-center justify-center mr-4`}
                   >
                     <currentService.icon
-                      className={`w-8 h-8 text-${currentService.color}-600`}
+                      className={`w-8 h-8 text-${currentService.color}-600 dark:text-${currentService.color}-400`}
                     />
                   </div>
-                  <h2 className="text-4xl font-bold text-gray-900">
+                  <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
                     {currentService.title}
                   </h2>
                 </div>
 
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                   {currentService.description}
                 </p>
 
                 <div className="space-y-4 mb-8">
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                     Key Features:
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {currentService.features.map((feature: string) => (
                       <div key={feature} className="flex items-center">
                         <CheckCircle2 className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                        <span className="text-gray-700 dark:text-gray-300">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -294,6 +294,7 @@ const Services = () => {
                 </button>
               </div>
 
+              {/* Offerings */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {currentService.offerings.map((offering: Offering, index: number) => (
                   <motion.div
@@ -301,26 +302,26 @@ const Services = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="card p-6 group hover:shadow-xl transition-all duration-300"
+                    className="card p-6 group bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-xl border border-gray-100 dark:border-gray-600 transition-all duration-300"
                   >
                     <div
-                      className={`w-12 h-12 bg-${currentService.color}-100 group-hover:bg-${currentService.color}-600 rounded-lg flex items-center justify-center mb-4 transition-colors duration-300`}
+                      className={`w-12 h-12 bg-${currentService.color}-100 group-hover:bg-${currentService.color}-600 dark:bg-${currentService.color}-900 dark:group-hover:bg-${currentService.color}-700 rounded-lg flex items-center justify-center mb-4 transition-colors duration-300`}
                     >
                       <offering.icon
-                        className={`w-6 h-6 text-${currentService.color}-600 group-hover:text-white transition-colors duration-300`}
+                        className={`w-6 h-6 text-${currentService.color}-600 group-hover:text-white dark:text-${currentService.color}-400 dark:group-hover:text-white transition-colors duration-300`}
                       />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">
                       {offering.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 text-sm">
+                    <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
                       {offering.description}
                     </p>
                     <div className="flex flex-wrap gap-1">
                       {offering.technologies.map((tech: string) => (
                         <span
                           key={tech}
-                          className="text-xs bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-700 px-2 py-1 rounded transition-colors duration-300 cursor-default"
+                          className="text-xs bg-gray-100 dark:bg-gray-600 hover:bg-blue-100 dark:hover:bg-blue-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded transition-colors duration-300 cursor-default"
                         >
                           {tech}
                         </span>
@@ -335,7 +336,7 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-50 dark:bg-gray-800">
         <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -343,18 +344,16 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Our <span className="gradient-text">Process</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               A proven methodology that ensures successful project delivery and
               exceptional results
             </p>
           </motion.div>
 
           <div className="relative">
-      
-
             <div className="grid md:grid-cols-5 gap-8">
               {processSteps.map((process, index) => (
                 <motion.div
@@ -367,10 +366,10 @@ const Services = () => {
                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto relative z-10">
                     {process.step}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                     {process.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     {process.description}
                   </p>
                 </motion.div>
@@ -381,33 +380,47 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding gradient-bg relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container-max relative z-10">
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center text-white"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-              Let's discuss your project requirements and create a customized
-              solution that drives real results for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-                Schedule Consultation
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                View Portfolio
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+<section className="section-padding relative overflow-hidden 
+  bg-gradient-to-br from-blue-500 to-purple-600 
+  dark:from-gray-900 dark:to-gray-800">
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
+  
+  <div className="container-max relative z-10">
+    <motion.div
+      initial={{ scale: 0.9, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="text-center"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white dark:text-gray-100">
+        Ready to Get Started?
+      </h2>
+      <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed text-white/90 dark:text-gray-300">
+        Let's discuss your project requirements and create a customized
+        solution that drives real results for your business.
+      </p>
+
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button className="bg-white text-blue-600 hover:bg-gray-100 
+          font-semibold py-4 px-8 rounded-lg 
+          transition-all duration-300 transform hover:scale-105 hover:shadow-2xl
+          dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-200">
+          Schedule Consultation
+        </button>
+
+        <button className="border-2 border-white text-white 
+          hover:bg-white hover:text-blue-600 
+          font-semibold py-4 px-8 rounded-lg 
+          transition-all duration-300 transform hover:scale-105
+          dark:border-gray-300 dark:text-gray-200 dark:hover:bg-gray-200 dark:hover:text-gray-900">
+          View Portfolio
+        </button>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
     </div>
   );
 };

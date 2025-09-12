@@ -117,9 +117,9 @@ const Blog = () => {
   const featuredPosts = blogPosts.filter(post => post.featured);
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 dark:bg-gray-900 transition-colors duration-300">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="section-padding bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
         <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -127,10 +127,10 @@ const Blog = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               Tech <span className="gradient-text">Insights</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Stay ahead of the curve with expert insights on web development, automation, 
               and machine learning from our team of industry professionals.
             </p>
@@ -140,13 +140,13 @@ const Blog = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4 mb-8">
               <div className="relative flex-1">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500" />
                 <input
                   type="text"
                   placeholder="Search articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300"
+                  className="w-full pl-12 pr-4 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 rounded-lg text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300"
                 />
               </div>
             </div>
@@ -159,7 +159,7 @@ const Blog = () => {
                   className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
+                      : 'bg-white dark:bg-gray-800 dark:text-gray-300 text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
                   }`}
                 >
                   <category.icon className="w-4 h-4 mr-2" />
@@ -173,7 +173,7 @@ const Blog = () => {
 
       {/* Featured Posts */}
       {featuredPosts.length > 0 && (
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-white dark:bg-gray-900 transition-colors duration-300">
           <div className="container-max">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -181,7 +181,7 @@ const Blog = () => {
               transition={{ duration: 0.6 }}
               className="mb-12"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Articles</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">Featured Articles</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {featuredPosts.slice(0, 2).map((post, index) => (
                   <motion.article
@@ -189,7 +189,7 @@ const Blog = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="card overflow-hidden group cursor-pointer"
+                    className="card overflow-hidden group cursor-pointer bg-white dark:bg-gray-800 border dark:border-gray-700 transition-colors duration-300"
                   >
                     <div className="relative overflow-hidden">
                       <img
@@ -205,7 +205,7 @@ const Blog = () => {
                     </div>
 
                     <div className="p-6">
-                      <div className="flex items-center text-sm text-gray-500 mb-4">
+                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                         <User className="w-4 h-4 mr-1" />
                         <span className="mr-4">{post.author}</span>
                         <Calendar className="w-4 h-4 mr-1" />
@@ -214,17 +214,17 @@ const Blog = () => {
                         <span>{post.readTime}</span>
                       </div>
 
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                         {post.title}
                       </h3>
 
-                      <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
+                      <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{post.excerpt}</p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
                         {post.tags.slice(0, 3).map((tag) => (
                           <span
                             key={tag}
-                            className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded flex items-center"
+                            className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded flex items-center"
                           >
                             <Tag className="w-3 h-3 mr-1" />
                             {tag}
@@ -234,7 +234,7 @@ const Blog = () => {
 
                       <Link
                         to={`/blog/${post.id}`}
-                        className="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300 flex items-center group"
+                        className="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-300 flex items-center group"
                       >
                         Read More
                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -249,7 +249,7 @@ const Blog = () => {
       )}
 
       {/* All Posts */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -257,7 +257,7 @@ const Blog = () => {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">
               All Articles ({filteredPosts.length})
             </h2>
           </motion.div>
@@ -269,7 +269,7 @@ const Blog = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="card overflow-hidden group cursor-pointer"
+                className="card overflow-hidden group cursor-pointer bg-white dark:bg-gray-800 border dark:border-gray-700 transition-colors duration-300"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -287,7 +287,7 @@ const Blog = () => {
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center text-sm text-gray-500 mb-4">
+                  <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                     <User className="w-4 h-4 mr-1" />
                     <span className="mr-4">{post.author}</span>
                     <Calendar className="w-4 h-4 mr-1" />
@@ -296,17 +296,17 @@ const Blog = () => {
                     <span>{post.readTime}</span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     {post.title}
                   </h3>
 
-                  <p className="text-gray-600 mb-4 leading-relaxed">{post.excerpt}</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{post.excerpt}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.slice(0, 2).map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded flex items-center"
+                        className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-1 rounded flex items-center"
                       >
                         <Tag className="w-3 h-3 mr-1" />
                         {tag}
@@ -316,7 +316,7 @@ const Blog = () => {
 
                   <Link
                     to={`/blog/${post.id}`}
-                    className="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300 flex items-center group"
+                    className="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-300 flex items-center group"
                   >
                     Read More
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -328,9 +328,9 @@ const Blog = () => {
 
           {filteredPosts.length === 0 && (
             <div className="text-center py-12">
-              <Search className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">No articles found</h3>
-              <p className="text-gray-500">Try adjusting your search terms or filters</p>
+              <Search className="w-16 h-16 text-gray-300 dark:text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-300 mb-2">No articles found</h3>
+              <p className="text-gray-500 dark:text-gray-400">Try adjusting your search terms or filters</p>
             </div>
           )}
         </div>

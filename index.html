@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Omnicore - Leading software solutions company specializing in web development, automation, and machine learning services." />
-    <meta name="keywords" content="web development, automation, machine learning, AI, software solutions, custom applications" />
-    <meta name="author" content="Omnicore" />
-    <meta property="og:title" content="Omnicore - Software Solutions Company" />
-    <meta property="og:description" content="Transform your business with our cutting-edge web development, automation, and machine learning solutions." />
-    <meta property="og:type" content="website" />
     <title>Omnicore - Software Solutions Company</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- theme preloader -->
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
