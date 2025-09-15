@@ -21,7 +21,7 @@ const TailoredProject: React.FC = () => {
     e.preventDefault();
     console.log("Form submitted:", formData);
 
-    // ✅ Later backend team will handle mailing logic
+   
     alert("✅ Your project request has been submitted!");
     setFormData({
       projectName: "",
@@ -48,7 +48,7 @@ const TailoredProject: React.FC = () => {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        {/* Glow effect */}
+       
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r 
                         from-blue-500/20 to-purple-500/20 blur-2xl -z-10" />
 
@@ -64,7 +64,7 @@ const TailoredProject: React.FC = () => {
         </motion.h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Project Name */}
+         
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -86,7 +86,7 @@ const TailoredProject: React.FC = () => {
             />
           </motion.div>
 
-          {/* Project Description */}
+         
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -108,7 +108,7 @@ const TailoredProject: React.FC = () => {
             />
           </motion.div>
 
-          {/* Company Name */}
+      
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -130,7 +130,7 @@ const TailoredProject: React.FC = () => {
             />
           </motion.div>
 
-          {/* Email */}
+         
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -152,7 +152,7 @@ const TailoredProject: React.FC = () => {
             />
           </motion.div>
 
-          {/* Phone */}
+         
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -174,7 +174,7 @@ const TailoredProject: React.FC = () => {
             />
           </motion.div>
 
-          {/* Submit Button */}
+         
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

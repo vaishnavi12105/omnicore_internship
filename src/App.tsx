@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -10,39 +13,45 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import GetStarted from "./pages/GetStarted";
-import TailoredProject from "./pages/TailoredProject"; // ✅ actual form component
+import TailoredProject from "./pages/TailoredProject";
 import Projects from "./pages/Projects";
-import ScrollToTop from "./components/ScrollToTop";
+import ProjectDetails from "./pages/ProjectDetails";
 
-function AppContent({
-  darkMode,
-  setDarkMode,
-}: {
+interface AppContentProps {
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
+}
+
+function AppContent({ darkMode, setDarkMode }: AppContentProps) {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
+      <motion.div
+        key={location.pathname}
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -15 }}
+        transition={{ duration: 0.3 }}
+      >
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
 
-        {/* NEW ROUTES */}
-        <Route
-          path="/get-started"
-          element={<GetStarted darkMode={darkMode} setDarkMode={setDarkMode} />}
-        />
-        <Route path="/projects" element={<Projects />} />
-
-        {/* ✅ Tailored Project now shows the actual form */}
-        <Route path="/tailored-project" element={<TailoredProject />} />
-      </Routes>
+          {/* NEW ROUTES */}
+          <Route
+            path="/get-started"
+            element={<GetStarted darkMode={darkMode} setDarkMode={setDarkMode} />}
+          />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetails />} />
+          <Route path="/tailored-project" element={<TailoredProject />} />
+        </Routes>
+      </motion.div>
     </AnimatePresence>
   );
 }
