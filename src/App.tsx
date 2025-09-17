@@ -16,6 +16,7 @@ import GetStarted from "./pages/GetStarted";
 import TailoredProject from "./pages/TailoredProject";
 import Projects from "./pages/Projects";
 import ProjectDetails from "./pages/ProjectDetails";
+import "yet-another-react-lightbox/styles.css";
 
 interface AppContentProps {
   darkMode: boolean;

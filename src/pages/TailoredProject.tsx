@@ -53,15 +53,20 @@ const TailoredProject: React.FC = () => {
                         from-blue-500/20 to-purple-500/20 blur-2xl -z-10" />
 
         <motion.h1
-          className="text-4xl font-extrabold mb-8 text-center 
-                     bg-clip-text text-transparent bg-gradient-to-r 
-                     from-blue-600 to-purple-600 dark:from-cyan-400 dark:to-green-400"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-        >
-          Create a Tailored Project
-        </motion.h1>
+  className="text-4xl font-bold tracking-tight mb-6 text-center"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.4, duration: 0.5 }}
+>
+  <span className="text-gray-900 dark:text-white">Create a Tailored Project</span>
+  <span className="bg-clip-text text-transparent bg-gradient-to-r 
+                   from-blue-600 to-purple-600 
+                   dark:from-cyan-400 dark:to-green-400">
+   
+  </span>
+</motion.h1>
+
+
 
         <form onSubmit={handleSubmit} className="space-y-6">
          
