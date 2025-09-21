@@ -10,7 +10,7 @@ const blogPosts = [
     title: "The Future of Web Development: Trends to Watch in 2024",
     author: "Sarah Chen",
     date: "2024-01-15",
-    readTime: "8 min read",
+    
     category: "web",
     tags: ["Web Development", "Trends", "AI", "PWA"],
     image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -29,7 +29,7 @@ In summary, the future of web development in 2024 will be shaped by innovation, 
     title: "Automating Business Processes: A Complete Guide",
     author: "Michael Thompson",
     date: "2024-01-12",
-    readTime: "12 min read",
+    
     category: "automation",
     tags: ["Automation", "Business Process", "Efficiency", "ROI"],
     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -48,7 +48,7 @@ As technology continues to evolve, AI, machine learning, and cloud-based solutio
     title: "Machine Learning in Practice: Real-World Applications",
     author: "Emily Davis",
     date: "2024-01-10",
-    readTime: "10 min read",
+    
     category: "ml",
     tags: ["Machine Learning", "AI", "Predictive Analytics", "Data Science"],
     image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -69,7 +69,7 @@ As machine learning continues to evolve, its applications will expand into even 
     title: "Building Scalable E-commerce Platforms",
     author: "Alex Rodriguez",
     date: "2024-01-08",
-    readTime: "15 min read",
+    
     category: "web",
     tags: ["E-commerce", "Scalability", "Performance", "Architecture"],
     image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -94,7 +94,7 @@ In conclusion, building a scalable e-commerce platform requires a balance of rob
     title: "The ROI of Business Automation: Measuring Success",
     author: "Sarah Chen",
     date: "2024-01-05",
-    readTime: "7 min read",
+   
     category: "automation",
     tags: ["ROI", "Metrics", "Business Value", "Case Studies"],
     image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",

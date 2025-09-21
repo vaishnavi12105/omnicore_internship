@@ -38,7 +38,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
       `,
       author: 'Sarah Chen',
       date: '2024-01-15',
-      readTime: '8 min read',
+      
       category: 'web',
       tags: ['Web Development', 'Trends', 'AI', 'PWA'],
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -65,7 +65,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
       `,
       author: 'Michael Thompson',
       date: '2024-01-12',
-      readTime: '12 min read',
+      
       category: 'automation',
       tags: ['Automation', 'Business Process', 'Efficiency', 'ROI'],
       image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -90,7 +90,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
       `,
       author: 'Emily Davis',
       date: '2024-01-10',
-      readTime: '10 min read',
+     
       category: 'ml',
       tags: ['Machine Learning', 'AI', 'Predictive Analytics', 'Data Science'],
       image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -115,7 +115,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
       `,
       author: 'Alex Rodriguez',
       date: '2024-01-08',
-      readTime: '15 min read',
+      
       category: 'web',
       tags: ['E-commerce', 'Scalability', 'Performance', 'Architecture'],
       image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -142,7 +142,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
       `,
       author: 'Sarah Chen',
       date: '2024-01-05',
-      readTime: '7 min read',
+      
       category: 'automation',
       tags: ['ROI', 'Metrics', 'Business Value', 'Case Studies'],
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
@@ -289,8 +289,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
                         <span className="mr-4">{post.author}</span>
                         <Calendar className="w-4 h-4 mr-1" />
                         <span className="mr-4">{new Date(post.date).toLocaleDateString()}</span>
-                        <Clock className="w-4 h-4 mr-1" />
-                        <span>{post.readTime}</span>
+                       
                       </div>
 
                       <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-blue-600 transition-colors duration-300">
@@ -371,8 +370,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
                     <span className="mr-4">{post.author}</span>
                     <Calendar className="w-4 h-4 mr-1" />
                     <span className="mr-4">{new Date(post.date).toLocaleDateString()}</span>
-                    <Clock className="w-4 h-4 mr-1" />
-                    <span>{post.readTime}</span>
+                    
                   </div>
 
                   <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 group-hover:text-blue-600 transition-colors duration-300">

@@ -12,7 +12,7 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
-import PortfolioDetail from "./pages/PortfolioDetail";
+import CaseStudy from "./pages/CaseStudy";
 import BlogDetail from "./pages/BlogDetail";
 import GetStarted from "./pages/GetStarted";
 import TailoredProject from "./pages/TailoredProject";
@@ -43,7 +43,7 @@ function AppContent({ darkMode, setDarkMode }: AppContentProps) {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
-           <Route path="/portfolio/:id" element={<PortfolioDetail />} />
+          <Route path="/case-study/:id" element={<CaseStudy />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetail />} />

@@ -43,7 +43,11 @@ export const projects = [
     image:
       "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
     technologies: ["Python", "Power Automate", "SQL", "APIs"],
-    results: ["70% reduction in processing time", "90% accuracy improvement", "$50K annual savings"],
+    results: [
+      "70% reduction in processing time",
+      "90% accuracy improvement",
+      "$50K annual savings",
+    ],
     demoUrl: "#",
     githubUrl: "#",
     client: "Manufacturing Solutions",
@@ -286,10 +290,14 @@ const Portfolio = () => {
                     <span>Duration: {project.duration}</span>
                   </div>
 
-                  <button className="w-full btn-outline flex items-center justify-center group dark:border-gray-700 dark:text-gray-300 hover:dark:bg-gray-700">
+                  {/* Only the Link remains */}
+                  <Link
+                    to={`/case-study/${project.id}`}
+                    className="w-full btn-outline flex items-center justify-center group dark:border-gray-700 dark:text-gray-300 hover:dark:bg-gray-700"
+                  >
                     View Case Study
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -322,8 +330,6 @@ const Portfolio = () => {
               <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 dark:border-gray-300 dark:text-gray-200 dark:hover:bg-gray-200 dark:hover:text-gray-900">
                 Schedule Consultation
               </button>
-
-              
             </div>
           </motion.div>
         </div>
