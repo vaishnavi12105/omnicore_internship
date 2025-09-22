@@ -41,7 +41,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
       
       category: 'web',
       tags: ['Web Development', 'Trends', 'AI', 'PWA'],
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/images//blog_images/web.png',
       featured: true
     },
     {
@@ -68,7 +68,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
       
       category: 'automation',
       tags: ['Automation', 'Business Process', 'Efficiency', 'ROI'],
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/images//blog_images/business.png',
       featured: false
     },
     {
@@ -93,7 +93,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
      
       category: 'ml',
       tags: ['Machine Learning', 'AI', 'Predictive Analytics', 'Data Science'],
-      image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/images//blog_images/ml.png',
       featured: true
     },
     {
@@ -118,7 +118,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
       
       category: 'web',
       tags: ['E-commerce', 'Scalability', 'Performance', 'Architecture'],
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/images//blog_images/ecom.png',
       featured: false
     },
     {
@@ -145,7 +145,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
       
       category: 'automation',
       tags: ['ROI', 'Metrics', 'Business Value', 'Case Studies'],
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/images//blog_images/roi.png',
       featured: false
     },
     {
@@ -173,7 +173,7 @@ Looking ahead, developers should invest in learning TypeScript, AI-assisted codi
       readTime: '11 min read',
       category: 'ml',
       tags: ['AI', 'Customer Service', 'Chatbots', 'Implementation'],
-      image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/images//blog_images/cust.png',
       featured: false
     }
   ];

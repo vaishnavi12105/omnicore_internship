@@ -22,7 +22,7 @@ export const projects = [
     description:
       "A modern, responsive e-commerce platform with advanced features including real-time inventory management, payment processing, and customer analytics.",
     image:
-      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "/images/port_banner/portecom.png",
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
     results: [
       "300% increase in online sales",
@@ -41,7 +41,7 @@ export const projects = [
     description:
       "Comprehensive automation solution that streamlined invoice processing, inventory management, and customer communications for a mid-size manufacturing company.",
     image:
-      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "/images/port_banner/portbus.png",
     technologies: ["Python", "Power Automate", "SQL", "APIs"],
     results: [
       "70% reduction in processing time",
@@ -60,7 +60,7 @@ export const projects = [
     description:
       "Machine learning-powered dashboard that provides sales forecasting, customer behavior analysis, and market trend predictions for strategic decision making.",
     image:
-      "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "/images/port_banner/portdash.png",
     technologies: ["Python", "TensorFlow", "React", "PostgreSQL"],
     results: [
       "85% prediction accuracy",
@@ -79,7 +79,7 @@ export const projects = [
     description:
       "Cloud-based SaaS application for project management with real-time collaboration, task tracking, and comprehensive reporting features.",
     image:
-      "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "/images/port_banner/portsaas.png",
     technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
     results: ["10,000+ active users", "99.95% uptime", "4.8/5 user rating"],
     demoUrl: "#",
@@ -94,7 +94,7 @@ export const projects = [
     description:
       "Custom workflow management system that automated approval processes, document routing, and task assignments for a large enterprise.",
     image:
-      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "/images/port_banner/portwork.png",
     technologies: ["React", "Node.js", "MongoDB", "Redis"],
     results: ["60% faster approvals", "80% reduction in errors", "Improved compliance"],
     demoUrl: "#",
@@ -109,7 +109,7 @@ export const projects = [
     description:
       "Intelligent customer service chatbot using natural language processing to handle customer inquiries, process orders, and provide personalized recommendations.",
     image:
-      "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "/images/port_banner/portai.png",
     technologies: ["Python", "OpenAI", "React", "FastAPI"],
     results: ["24/7 customer support", "80% query resolution", "90% satisfaction rate"],
     demoUrl: "#",

@@ -23,8 +23,8 @@ const projects = [
     name: "E-Commerce App",
     description: "Full-stack app with payment integration and user management",
     images: [
-      "https://via.placeholder.com/800x500?text=E-Commerce+1",
-      "https://via.placeholder.com/800x500?text=E-Commerce+2",
+       "/images/e1.png",
+       "/images/e2.png",
     ],
   },
   {
@@ -32,10 +32,10 @@ const projects = [
     name: "AI Chatbot",
     description: "Conversational AI assistant powered by OpenAI APIs",
     images: [
-      "https://via.placeholder.com/800x500?text=Chatbot+1",
-      "https://via.placeholder.com/800x500?text=Chatbot+2",
-      "https://via.placeholder.com/800x500?text=Chatbot+3",
-      "https://via.placeholder.com/800x500?text=Chatbot+4",
+       "/images/a1.png",
+       "/images/a2.png",
+       "/images/a3.png",
+       "/images/a4.png",
     ],
   },
 ];

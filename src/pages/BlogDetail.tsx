@@ -13,7 +13,7 @@ const blogPosts = [
     
     category: "web",
     tags: ["Web Development", "Trends", "AI", "PWA"],
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: '/images//blog_images/web.png',
     content: `Web development is evolving rapidly, driven by advancements in technology and changing user expectations. In 2024, the focus will be on building faster, smarter, and more immersive digital experiences. Businesses and developers alike are embracing modern tools and frameworks to create applications that are not only visually appealing but also highly efficient and secure. As AI, Web3, and cloud computing continue to grow, the landscape of web development is set to transform significantly.
 
 One of the most prominent trends is Artificial Intelligence (AI) integration. AI-powered tools are revolutionizing how websites and applications are built, tested, and optimized. From chatbots and personalized recommendations to code generation and automated testing, AI is helping developers save time and enhance user experiences. In particular, AI-driven design is gaining popularity, allowing websites to dynamically adapt to individual user behavior.
@@ -32,7 +32,7 @@ In summary, the future of web development in 2024 will be shaped by innovation, 
     
     category: "automation",
     tags: ["Automation", "Business Process", "Efficiency", "ROI"],
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: '/images//blog_images/business.png',
     content: `In today’s fast-paced digital world, businesses are constantly looking for ways to improve efficiency, reduce costs, and deliver better customer experiences. Business process automation (BPA) has emerged as a powerful solution to achieve these goals. By automating repetitive and time-consuming tasks, companies can focus on strategic growth while minimizing human error. From small startups to large enterprises, automation is transforming the way organizations operate across industries.
 
 At its core, business process automation involves using technology to execute recurring tasks with minimal human intervention. This can include anything from automating customer support with chatbots to streamlining payroll, marketing campaigns, and supply chain management. Tools like workflow automation software, robotic process automation (RPA), and AI-driven platforms are central to modern automation strategies. These technologies not only speed up processes but also ensure accuracy and consistency.
@@ -51,7 +51,7 @@ As technology continues to evolve, AI, machine learning, and cloud-based solutio
     
     category: "ml",
     tags: ["Machine Learning", "AI", "Predictive Analytics", "Data Science"],
-    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: '/images//blog_images/ml.png',
     content: `Machine learning (ML) has moved beyond theoretical research and is now a vital part of modern technology, powering applications we interact with every day. By enabling systems to learn from data and improve their performance over time, machine learning is revolutionizing industries and shaping the future of innovation. From personalized recommendations on streaming platforms to self-driving cars, ML is no longer just a buzzword — it’s a practical tool driving real-world transformation.
 
 One of the most common applications of machine learning is in recommendation systems. Companies like Netflix, Amazon, and Spotify use ML algorithms to analyze user behavior and suggest movies, products, or music tailored to individual preferences. This not only enhances user experience but also increases customer engagement and sales. Similarly, social media platforms leverage machine learning to curate feeds, detect spam, and identify harmful content in real time.
@@ -72,7 +72,7 @@ As machine learning continues to evolve, its applications will expand into even 
     
     category: "web",
     tags: ["E-commerce", "Scalability", "Performance", "Architecture"],
-    image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: '/images//blog_images/ecom.png',
     content: `Building Scalable E-commerce Platforms
 
 In today’s digital economy, e-commerce platforms play a vital role in connecting businesses with customers worldwide. As online shopping continues to grow, building a platform that can scale seamlessly to handle increasing traffic, product listings, and transactions has become essential. A scalable e-commerce platform ensures smooth performance, better user experience, and long-term business growth, even during peak seasons like Black Friday or festive sales.
@@ -97,7 +97,7 @@ In conclusion, building a scalable e-commerce platform requires a balance of rob
    
     category: "automation",
     tags: ["ROI", "Metrics", "Business Value", "Case Studies"],
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: '/images//blog_images/roi.png',
     content: `As businesses embrace digital transformation, business process automation (BPA) has become a key strategy for improving efficiency, reducing costs, and enhancing customer experiences. However, like any major investment, automation must deliver measurable results. This is where Return on Investment (ROI) plays a crucial role. By evaluating the ROI of automation initiatives, companies can determine whether their efforts are driving tangible value and align future strategies with clear business objectives.
 
 At its core, ROI for business automation measures the financial and operational benefits gained compared to the costs of implementing automation tools. These costs may include software subscriptions, infrastructure upgrades, employee training, and maintenance expenses. The benefits, on the other hand, often include reduced labor costs, faster processes, fewer errors, higher productivity, and improved customer satisfaction. A positive ROI indicates that automation is contributing to overall business growth.
@@ -128,7 +128,7 @@ In conclusion, measuring the ROI of business automation is essential for proving
     readTime: "11 min read",
     category: "ml",
     tags: ["AI", "Customer Service", "Chatbots", "Implementation"],
-    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600",
+    image: '/images//blog_images/cust.png',
     content: `In today’s digital-first world, customer service plays a pivotal role in shaping brand reputation and customer loyalty. With rising customer expectations for quick, personalized, and round-the-clock support, businesses are increasingly turning to Artificial Intelligence (AI) to enhance their service capabilities. AI-powered customer service solutions, such as chatbots, virtual assistants, and intelligent analytics, help companies provide faster, more accurate, and highly personalized interactions — all while reducing operational costs.
 
 AI-driven customer service goes beyond simple automation. It leverages technologies like natural language processing (NLP), machine learning (ML), and predictive analytics to understand customer intent, provide relevant solutions, and even anticipate future needs. Popular examples include automated support agents that can resolve common queries, AI tools that analyze customer sentiment, and recommendation systems that suggest products based on customer behavior.

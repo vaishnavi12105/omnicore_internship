@@ -16,7 +16,7 @@ const caseStudies: Record<string, any> = {
     features: ["Real-time inventory tracking", "Secure payment gateway integration", "Customer analytics dashboard"],
     challenges: ["Integrating multiple payment providers", "Ensuring 99.9% uptime", "Handling peak traffic during sales"],
     results: ["300% increase in online sales", "50% reduction in cart abandonment", "99.9% uptime achieved"],
-    screenshots: ["https://via.placeholder.com/600x400?text=E-Commerce+Screenshot+1", "https://via.placeholder.com/600x400?text=E-Commerce+Screenshot+2"],
+    screenshots: ["/images/portfolio_images/ecom1.png", "/images/portfolio_images/ecom2.png"],
   },
   "2": {
     title: "Business Process Automation",
@@ -25,7 +25,7 @@ const caseStudies: Record<string, any> = {
     features: ["Automated invoice processing", "Inventory sync", "Email notifications"],
     challenges: ["Legacy system integration", "Error handling in automation"],
     results: ["70% faster processing", "90% accuracy improvement", "$50K annual savings"],
-    screenshots: ["https://via.placeholder.com/600x400?text=Automation+System+1"],
+    screenshots: ["/images/portfolio_images/bus1.png","/images/portfolio_images/bus2.png"],
   },
   "3": {
     title: "Predictive Analytics Dashboard",
@@ -34,7 +34,7 @@ const caseStudies: Record<string, any> = {
     features: ["Sales forecasting with time-series models", "Customer segmentation & trend analysis", "Interactive visualization dashboard"],
     challenges: ["Cleaning and preparing large datasets", "Optimizing ML models for accuracy", "Deploying ML in production reliably"],
     results: ["85% prediction accuracy", "40% better inventory planning", "25% increase in revenue"],
-    screenshots: ["https://via.placeholder.com/600x400?text=Analytics+Dashboard+1", "https://via.placeholder.com/600x400?text=Analytics+Dashboard+2"],
+    screenshots: ["/images/portfolio_images/dash1.png", "/images/portfolio_images/dash2.png"],
   },
   "4": {
     title: "SaaS Application",
@@ -43,7 +43,7 @@ const caseStudies: Record<string, any> = {
     features: ["Real-time collaboration", "Kanban task boards", "Comprehensive reporting"],
     challenges: ["Implementing real-time sync", "Scaling for thousands of users", "Maintaining data security"],
     results: ["10,000+ active users", "99.95% uptime", "4.8/5 user rating"],
-    screenshots: ["https://via.placeholder.com/600x400?text=SaaS+App+1", "https://via.placeholder.com/600x400?text=SaaS+App+2"],
+    screenshots: ["/images/portfolio_images/sass1.png", "/images/portfolio_images/sass2.png"],
   },
   "5": {
     title: "Workflow Optimization System",
@@ -52,7 +52,7 @@ const caseStudies: Record<string, any> = {
     features: ["Approval routing automation", "Document management", "Role-based access control"],
     challenges: ["Complex enterprise hierarchy", "Integrating with legacy databases", "Optimizing Redis caching"],
     results: ["60% faster approvals", "80% reduction in errors", "Improved compliance"],
-    screenshots: ["https://via.placeholder.com/600x400?text=Workflow+System+1"],
+    screenshots: ["/images/portfolio_images/work1.png","/images/portfolio_images/work2.png"],
   },
   "6": {
     title: "AI-Powered Chatbot",
@@ -61,7 +61,7 @@ const caseStudies: Record<string, any> = {
     features: ["Order processing through chat", "Personalized product recommendations", "Multilingual support"],
     challenges: ["Training chatbot with custom datasets", "Handling ambiguous queries", "Integrating seamlessly with CRM"],
     results: ["24/7 customer support", "80% query resolution", "90% customer satisfaction"],
-    screenshots: ["https://via.placeholder.com/600x400?text=Chatbot+Demo+1", "https://via.placeholder.com/600x400?text=Chatbot+Demo+2"],
+    screenshots: ["/images/portfolio_images/ai1.png", "/images/portfolio_images/ai2.png"],
   },
 };
 
