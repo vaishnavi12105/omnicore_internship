@@ -101,64 +101,73 @@ const Home = () => {
   return (
     <div className="transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex items-center 
+<section
+  className="relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex items-center 
   bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
-  dark:from-gray-900 dark:via-gray-800 dark:to-black overflow-hidden">
-  <div className="absolute inset-0 bg-black/30"></div>
+  dark:from-gray-900 dark:via-gray-800 dark:to-black overflow-hidden"
+>
+  <div className="absolute inset-0 bg-black/50 dark:bg-black/30"></div>
+
   <ParticleBackground />
-        <div className="container-max relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center text-white"
-          >
-            <motion.h1
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="m-0 text-5xl md:text-7xl font-bold leading-tight mb-6"
-            >
-              Transform Your Business
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
-                With Innovation
-              </span>
-            </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-200 dark:text-gray-300"
-            >
-              We deliver cutting-edge software solutions, intelligent automation, and machine learning models 
-              that drive growth and efficiency for modern businesses.
-            </motion.p>
+  <div className="container-max relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-center text-white"
+    >
+      {/* Title */}
+      <motion.h1
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="m-0 text-5xl md:text-7xl font-bold leading-tight mb-6"
+      >
+        Transform Your Business
+        <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+          With Innovation
+        </span>
+      </motion.h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
-            >
-              <Link
-                to="/get-started"
-                className="bg-white text-blue-600 hover:bg-gray-100 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center group"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              <Link
-                to="/services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:text-blue-400 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Services
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Subtitle */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-200 dark:text-gray-300"
+      >
+        We deliver cutting-edge software solutions, intelligent automation,
+        and machine learning models that drive growth and efficiency for
+        modern businesses.
+      </motion.p>
+
+      {/* Buttons */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="flex flex-col sm:flex-row items-center justify-center gap-4"
+      >
+        <Link
+          to="/get-started"
+          className="bg-white text-blue-600 hover:bg-gray-100 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center group"
+        >
+          Get Started Today
+          <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+        </Link>
+        <Link
+          to="/services"
+          className="border-2 border-white text-white hover:bg-white hover:text-blue-600 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:text-blue-400 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+        >
+          Explore Services
+        </Link>
+      </motion.div>
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Stats Section */}
       <section className="py-16 bg-white dark:bg-gray-800">
