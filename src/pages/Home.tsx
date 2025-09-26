@@ -102,11 +102,12 @@ const Home = () => {
     <div className="transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
       {/* Hero Section */}
 <section
-  className="relative min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)] flex items-center 
-  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
-  dark:from-gray-900 dark:via-gray-800 dark:to-black overflow-hidden"
+  className="relative flex items-center pt-16 md:pt-20 min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-5rem)]
+    bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+    dark:from-gray-900 dark:via-gray-800 dark:to-black overflow-hidden"
 >
-  <div className="absolute inset-0 bg-black/50 dark:bg-black/30"></div>
+  {/* Full overlay behind header */}
+  <div className="absolute inset-0 bg-black/50 dark:bg-black/30 pointer-events-none"></div>
 
   <ParticleBackground />
 
@@ -167,6 +168,7 @@ const Home = () => {
     </motion.div>
   </div>
 </section>
+
 
 
       {/* Stats Section */}

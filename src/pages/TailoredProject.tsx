@@ -42,8 +42,8 @@ const TailoredProject: React.FC = () => {
       transition={{ duration: 0.6, ease: "easeInOut" }}
     >
       <motion.div
-        className="max-w-2xl w-full relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl 
-                   rounded-2xl shadow-2xl p-10 border border-gray-200/50 dark:border-gray-700/50"
+        className="max-w-2xl w-full relative bg-white/80 dark:bg-gray-900/100 backdrop-blur-xl dark:backdrop-blur-none 
+                   rounded-2xl shadow-2xl p-10 border border-gray-200/50 dark:border-none"
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}

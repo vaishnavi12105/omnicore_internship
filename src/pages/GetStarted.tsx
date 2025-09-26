@@ -22,7 +22,7 @@ const GetStarted: React.FC<GetStartedProps> = ({ darkMode, setDarkMode }) => {
       </button>
 
       {/* Top Header Section */}
-      <section className="border-b py-12 shadow-sm bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-950 dark:to-gray-900 transition-colors duration-500">
+      <section className="py-12 shadow-sm bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-950 dark:to-gray-900 transition-colors duration-500">
         <div className="container-max text-center">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}

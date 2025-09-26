@@ -28,12 +28,13 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 h-16 md:h-20 border-b transition-colors duration-200
-        ${scrolled
-          ? 'bg-white dark:bg-gray-950 border-gray-200 dark:border-gray-800 shadow-sm' 
-          : 'bg-white dark:bg-gray-950 border-transparent'
-        }`}
-    >
+  className={`sticky top-0 z-50 h-16 md:h-20 transition-all duration-300
+    ${scrolled
+      ? 'bg-white dark:bg-gray-950 shadow-md '
+      : 'bg-white dark:bg-gray-950 '
+    }
+  `}
+>
       <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -53,9 +54,9 @@ export default function Header() {
             <Link
               key={item.name}
               to={item.path}
-              className={`text-sm font-medium relative group transition-colors 
-                ${location.pathname === item.path 
-                  ? 'text-blue-600 dark:text-blue-400' 
+              className={`text-sm font-medium relative group transition-colors
+                ${location.pathname === item.path
+                  ? 'text-blue-600 dark:text-blue-400'
                   : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                 }`}
             >
@@ -93,7 +94,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden fixed inset-x-0 top-16 md:top-20 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 shadow-sm"
+            className="md:hidden fixed inset-x-0 top-16 md:top-20 bg-white dark:bg-gray-950 shadow-none"
           >
             <div className="py-4 space-y-2">
               {navItems.map(item => (
