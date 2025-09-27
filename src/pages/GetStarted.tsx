@@ -12,8 +12,8 @@ const GetStarted: React.FC<GetStartedProps> = ({ darkMode, setDarkMode }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-500 relative">
-      {/* Dark Mode Toggle Button */}
+    <div className="transition-colors duration-500 bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 relative">
+      
       <button
         onClick={() => setDarkMode(!darkMode)}
         className="fixed top-6 right-6 p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:shadow-lg transition"
@@ -21,8 +21,8 @@ const GetStarted: React.FC<GetStartedProps> = ({ darkMode, setDarkMode }) => {
         {darkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
       </button>
 
-      {/* Top Header Section */}
-      <section className="py-12 shadow-sm bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-950 dark:to-gray-900 transition-colors duration-500">
+   
+      <section className="pt-16 pb-12 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-950 dark:to-gray-900 transition-colors duration-500">
         <div className="container-max text-center">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -41,9 +41,9 @@ const GetStarted: React.FC<GetStartedProps> = ({ darkMode, setDarkMode }) => {
         </div>
       </section>
 
-      {/* Cards Section */}
+      
       <section className="container-max py-16 grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Tailored Project Card */}
+       
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -72,7 +72,6 @@ const GetStarted: React.FC<GetStartedProps> = ({ darkMode, setDarkMode }) => {
           </button>
         </motion.div>
 
-        {/* Browse Projects Card */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}

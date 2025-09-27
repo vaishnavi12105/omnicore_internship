@@ -48,7 +48,7 @@ function AppContent({ darkMode, setDarkMode }: AppContentProps) {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
 
-          {/* NEW ROUTES */}
+          
           <Route
             path="/get-started"
             element={<GetStarted darkMode={darkMode} setDarkMode={setDarkMode} />}
@@ -84,7 +84,7 @@ function App() {
       <div className="min-h-screen font-inter bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <ScrollToTop />
-        <main className="pt-6">
+        <main >
           <AppContent darkMode={darkMode} setDarkMode={setDarkMode} />
         </main>
         <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
